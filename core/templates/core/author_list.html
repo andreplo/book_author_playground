@@ -1,0 +1,13 @@
+<h1>Authors & Books</h1>
+<ul>
+  {% for author in authors %}
+  <li>
+    <strong>{{ author.name }}</strong>
+    <ul>
+      {% for book in author.books.all %}
+      <li>{{ book.title }} ({{ book.published_at }})</li>
+      {% endfor %}
+    </ul>
+  </li>
+  {% endfor %}
+</ul>
