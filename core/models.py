@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib import admin
 
 # Create your models here.
 class Author(models.Model):
@@ -7,6 +8,7 @@ class Author(models.Model):
 
     def __str__(self):
         return self.name
+admin.site.register(Author)
 
 class Book(models.Model):
     title = models.CharField(max_length=200)
@@ -15,4 +17,6 @@ class Book(models.Model):
 
     def __str__(self):
         return self.title
+admin.site.register(Book)
+
 
